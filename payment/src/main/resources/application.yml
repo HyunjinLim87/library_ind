@@ -64,8 +64,20 @@ spring:
           contentType: application/json
 ---
 
+feign:
+  hystrix:
+    enabled: true
+
+# To set thread isolation to SEMAPHORE
+#hystrix:
+#  command:
+#    default:
+#      execution:
+#        isolation:
+#          strategy: SEMAPHORE
+
 hystrix:
   command:
-    # 전역설정 (부하 테스트를 위한 설정 )
+    # 전역설정
     default:
-      execution.isolation.thread.timeoutInMilliseconds: 500
+      execution.isolation.thread.timeoutInMilliseconds: 610

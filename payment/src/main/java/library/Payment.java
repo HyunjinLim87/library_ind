@@ -22,13 +22,13 @@ public class Payment {
         paid.publishAfterCommit();
 
         //부하테스트 시간끌기
-/*
+
         try {
-            Thread.currentThread().sleep((long) (400 + Math.random() * 220));
+            Thread.currentThread().sleep((long) (800 + Math.random() * 220));
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-*/
+
     }
 
     @PostUpdate
@@ -39,7 +39,7 @@ public class Payment {
 
         //부하테스트 시간끌기
         try {
-            Thread.currentThread().sleep((long) (500 + Math.random() * 220));
+            Thread.currentThread().sleep((long) (800 + Math.random() * 220));
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
