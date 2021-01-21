@@ -20,6 +20,13 @@ public class Member {
         MemberRegistered memberRegistered = new MemberRegistered();
         BeanUtils.copyProperties(this, memberRegistered);
         memberRegistered.publishAfterCommit();
+
+        /*부하 Start*/
+        try {
+            Thread.currentThread().sleep((long) (400 + Math.random() * 300));
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
 
